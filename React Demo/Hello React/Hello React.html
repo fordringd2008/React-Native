@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+  <!-- 核心库 -->
+  <script src="./build/react.js" charset="utf-8"></script>
+
+  <!-- 提供与dom相关的功能 -->
+  <script src="./build/react-dom.js" charset="utf-8"></script>
+
+  <!-- 本地的 -->
+  <script src="./build/browser.min.js" charset="utf-8"></script>
+
+
+  </head>
+  <body>
+      <div id="container">
+
+      </div>
+  </body>
+
+   <!-- 使用 JSX, 跟 JavaScript不兼容，是使用JSX的地方，要设置type:text、babel -->
+  <script type="text/babel">
+
+      // 在此处写 React代码
+
+      // 要求：渲染一行标题
+      /*
+
+      ReactDOM.render()
+      最基本的方法,用于将模板转换为HTML语言，渲染DOM并插入指定的DOM节点
+
+      参数1：模板的渲染内容（HTML）
+      参数2：这段模板需要插入的节点
+      参数3：渲染后的回调，一般不用
+      */
+
+      ReactDOM.render(
+          <h1>Hello React</h1>,
+          document.getElementById("container")
+      );
+
+      // JSX必须借助 React运行
+      // 等同于
+      ReactDOM.render(
+        React.createElement("h1", null, "Hello React"),
+        document.getElementById("container")
+      )
+
+
+
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
