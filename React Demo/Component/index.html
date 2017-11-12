@@ -13,6 +13,8 @@
   <!-- 本地的 -->
   <script src="./build/browser.min.js" charset="utf-8"></script>
 
+  <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script> -->
+
   <style>
     .pStyle{
       font-size: 20px;
@@ -24,7 +26,7 @@
     <div id="container"></div>
   </body>
 
-   <!-- 使用 JSX, 跟 JavaScript不兼容，是使用JSX的地方，要设置type:text、babel -->
+   <!-- 使用 JSX, 跟 JavaScript不兼容，是使用JSX的地方，要设置type:text/babel -->
   <script type="text/babel">
 
 
@@ -96,22 +98,79 @@
   };
 
 
-  var ShowMessage = React.createClass({
-    render:function(){
-      return (
-          <div style={{backgroundColor:"yellow", borderWidth:5, borderColor:"black", borderStyle:"solid"}}>
-            <h1 style={hStyle}>{this.protos.firstRow}</h1>
-            <h1 style={hStyle}>this.protos.firstRow</h1>
-            <p className="pStyle">{this.protos.secondRow}</p>
-          </div>
-      );
-    }
-  });
+  // var ShowMessage = React.createClass({
+  //   render: function(){
+  //     return (
+  //         <div style={{backgroundColor:"yellow", borderWidth:5, borderColor:"black", borderStyle:"solid"}}>
+  //           <h1 style={hStyle}>{this.props.firstRow}</h1>
+  //           // <h1 style={hStyle}>this.protos.firstRow</h1>
+  //           <p className="pStyle">{this.props.secondRow}</p>
+  //         </div>
+  //     );
+  //   }
+  // });
+
+  // ReactDOM.render(
+  //   <ShowMessage firstRow="你好", secondRow="第二行你好" />,
+  //   // <ShowMessage />,
+  //   document.getElementById('container')
+  // );
+
+  // var ShowMessage = React.createClass({
+  //   render:function(){
+  //     return <h1> 我的 </h1>;
+  //   }
+  // });
+
+
+
+var ShowMessage = React.createClass({
+  render:function(){
+    return <h1>那个sss</h1>;
+  }
+});
+
+
+
+
+
+
+
 
   ReactDOM.render(
-    <ShowMessage firstRow="你好", secondRow="第二行你好">,
-    document.getElementById('container')
+    <ShowMessage />,
+    document.getElementById("container")
   );
+
+
+  // var text = "ddd"
+  // ReactDOM.render(
+  //   <h1>{text}</h1>,
+  //   document.getElementById('container')
+  // );
+
+
+
+
+  //
+  // //  JSX语法是语法糖
+  //
+  // ReactDOM.render(
+  //   <h1>
+  //     Hell React
+  //   </h1>,
+  //   document.getElementById("container")
+  // );
+
+
+  // 在JSX语法中运行 Javascript代码 使用 {表达式}
+
+  // var text = "testText";
+  // ReactDOM.render(
+  //   <h1>{text}</h1>
+  //   document.getElementById("container")
+  // )
+
 
 
   </script>
