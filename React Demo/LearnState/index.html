@@ -48,37 +48,79 @@
 
 
 
-  var CheckButton = React.createClass({
-    // state 的初始化方法
-    getInitialState:function(){
+  // var CheckButton = React.createClass({
+  //   // state 的初始化方法
+  //   getInitialState:function(){
+  //     return {
+  //       // 对这个匿名对象这是属性，将会储存在 state中
+  //       // 默认未选中
+  //       isCheck : false
+  //     }
+  //   },
+  //   // 触发事件，修改状态值， this.setState
+  //   //          读取       this.state
+  //   handleClick:function(){
+  //     this.setState({
+  //       isCheck:!this.state.isCheck
+  //     });
+  //   },
+  //   render:function(){
+  //     var text = this.state.isCheck ? "已选中" : "未选中"
+  //     return (
+  //       <div>
+  //         <input type="checkbox" onChange={this.handleClick} />
+  //         {text}
+  //       </div>
+  //     );
+  //   }
+  // });
+  //
+  // ReactDOM.render(
+  //   <CheckButton />,
+  //   document.getElementById("container")
+  // );
+
+
+  // 需求：一个即时展示的文本输入框
+
+
+
+  var Input = React.createClass({
+
+    // 初始化状态方法
+    getInitialState : function(){
+      // 返回的是 state对象
       return {
-        // 对这个匿名对象这是属性，将会储存在 state中
-        // 默认未选中
-        isCheck : false
-      }
+        value:"请输入"
+      };
     },
-    // 触发事件，修改状态值， this.setState
-    //          读取       this.state
-    handleClick:function(){
+
+    // 触发事件方法
+    handleClick : function(event){
+      // 设置的是对象
       this.setState({
-        isCheck:!this.state.isCheck
+        value : event.target.value
       });
     },
-    render:function(){
-      var text = this.state.isCheck ? "已选中" : "未选中"
+
+    // 渲染方法
+    render : function () {
+      var value = this.state.value;
+      // 返回的是一组标签
       return (
         <div>
-          <input type="checkbox" onChange={this.handleClick} />
-          {text}
+          <input type = "text" value={value} onChange={this.handleClick}/>
+          <p>{value}</p>
         </div>
       );
     }
   });
 
   ReactDOM.render(
-    <CheckButton />,
+    <Input />,
     document.getElementById("container")
   );
+
 
 
 
