@@ -22,41 +22,54 @@
    <!-- 使用 JSX, 跟 JavaScript不兼容，是使用JSX的地方，要设置type:text、babel -->
   <script type="text/babel">
 
+  /*
+  嵌套组件的数值传递
+  */
 
-  var WebName = React.createClass({
+
+  // var WebName = React.createClass({
+  //   render:function(){
+  //     return <div>{this.props.webName}</div>;
+  //   }
+  // });
+  //
+  // var WebLink = React.createClass({
+  //   render:function(){
+  //     return <a href={this.props.webLink}>{this.props.webLink}</a>;
+  //   }
+  // });
+  //
+  //
+  // var WebShow = React.createClass({
+  //   render:function(){
+  //     return (
+  //         <div>
+  //             <WebName webName={this.props.wName}/>
+  //             <WebLink webLink={this.props.wLink} />
+  //         </div>
+  //     );
+  //   }
+  // });
+  //
+  // ReactDOM.render(
+  //   <WebShow wName="网易" wLink="http://www.baidu1.com"/>,
+  //   // <WebName />,
+  //   document.getElementById("container")
+  // );
+/*
+  {...this.props} 可以复制所有父组件的值
+*/
+
+  var Link = React.createClass({
     render:function(){
-      return <div>百度</div>;
-    }
-  });
-
-  var WebLink = React.createClass({
-    render:function(){
-      return <a href="www.baidu.com">www.baidu.com</a>;
-    }
-  });
-
-
-  var WebShow = React.createClass({
-    render:function(){
-      return (
-          <div>
-              <WebName />
-              <WebLink />
-          </div>
-      );
+      return <a {...this.props}>{this.props.name}</a>;
     }
   });
 
   ReactDOM.render(
-    <WebShow />,
-    // <WebName />,
+    <Link href="http:///www.baidu.com" name="百度" />,
     document.getElementById("container")
   );
-
-    // ReactDOM.render(
-    //   <div>111</div>,
-    //   document.getElementById("container")
-    // );
 
 
   /*
@@ -108,47 +121,9 @@
   //   document.getElementById("container")
   // );
 
-  ReactDOM.render(
-    <h1>11111</h1>,
-    document.getElementById("container")
-  );
-
-// <WebShow />,
-
-  
-
-
-
+  // ReactDOM.render(
+  //   <h1>11111</h1>,
+  //   document.getElementById("container")
+  // );
   </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </html>
