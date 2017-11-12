@@ -30,19 +30,53 @@
 
   */
 
-  var MyButton = React.createClass({
+  // var MyButton = React.createClass({
+  //   handleClick:function(){
+  //     alert("弹出提示框")
+  //   },
+  //   render:function(){
+  //     return (
+  //       <button onClick={this.handleClick}>{this.props.buttonTitle}</button>
+  //     );
+  //   }
+  // });
+  //
+  // ReactDOM.render(
+  //   <MyButton buttonTitle="按钮11" />,
+  //   document.getElementById("container")
+  // );
+
+
+
+  var CheckButton = React.createClass({
+    // state 的初始化方法
+    getInitialState:function(){
+      return {
+        // 对这个匿名对象这是属性，将会储存在 state中
+        // 默认未选中
+        isCheck : false
+      }
+    },
+    // 触发事件，修改状态值， this.setState
+    //          读取       this.state
     handleClick:function(){
-      alert("弹出提示框")
+      this.setState({
+        isCheck:!this.state.isCheck
+      });
     },
     render:function(){
+      var text = this.state.isCheck ? "已选中" : "未选中"
       return (
-        <button onClick={this.handleClick}>{this.props.buttonTitle}</button>
+        <div>
+          <input type="checkbox" onChange={this.handleClick} />
+          {text}
+        </div>
       );
     }
   });
 
   ReactDOM.render(
-    <MyButton buttonTitle="按钮11" />,
+    <CheckButton />,
     document.getElementById("container")
   );
 
