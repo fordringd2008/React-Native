@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+  <!-- 核心库 -->
+  <script src="./build/react.js" charset="utf-8"></script>
+
+  <!-- 提供与dom相关的功能 -->
+  <script src="./build/react-dom.js" charset="utf-8"></script>
+
+  <!-- 本地的 -->
+  <script src="./build/browser.min.js" charset="utf-8"></script>
+
+
+  </head>
+  <body>
+      <div id="container"></div>
+  </body>
+
+   <!-- 使用 JSX, 跟 JavaScript不兼容，是使用JSX的地方，要设置type:text、babel -->
+  <script type="text/babel">
+
+
+    /*
+      1，组件生命周期分为三个状态：
+              Mounting  : 组件挂载，已插入真实 DOM
+              Updating  : 组件更新，正在被重新渲染
+              Unmounting: 组件移除，已移除真实 DOM
+
+      2，生命周期分为4个阶段
+          创建，实例化，更新，销毁
+
+
+      // 三个阶段
+
+
+      1, Mounting ： 组件挂载相关的方法：
+          1> componentWillMount
+          组件将要挂载。 在render之前执行，但仅执行一次，即使多次渲染该组件，或者改变了组件的state
+          2> componentDidMount
+          组件已经挂载。 在render之后执行，同一个组件重复渲染只执行一次
+
+      2, Updating : 组件更新相关
+          1> componnetWillReceiveProps(object netProps)
+          已加载的组件收到新的props之前调用，注意组件初始化渲染时不会执行
+          2> sholdComponentUpdate(object netProps, object nextState)
+          组件判断是否重新渲染时调用。该接口实际上是在组件收到新的 props或者新的 state 的时候
+          会立即调用，然后通过
+          3> componentWillUpdate(object nextProps, object nextSate)
+          组件将要更新
+          4> componentDidUpdate(objcet nextPrps, object nextState)
+          组件已经更新
+
+      3， Unmouting 组件移除相关
+        1> componentWillUnmount
+        在组件要被移除之前的时间点触发，可以利用该方法来执行一些必要的组件清理组件将要移除
+
+
+      4, 声明周期中与props和state相关
+        1> getDefaultProps  设置props属性默认值
+        2> getInitialState  设置state属性默认值
+    */
+
+
+    /*
+      声明周期各阶段介绍
+
+    */
+
+
+    var Demo = React.createClass({
+
+      /*
+         一，创建阶段
+          流程：
+            只调用 getDefaultProps 方法
+      */
+      getDefaultProps : function(){
+        // 在创建类的时候被调用，设置 this.props的默认值
+        console.log("getDefaultProps");
+        return {};
+      },
+
+      /*
+        二， 实例化阶段
+          流程
+            getInitialState
+            componentWillMount
+            render
+            componentDidMount
+      */
+
+      getInitialState:function(){
+        // 设置 this.stat默认值
+        console.log("getInitialState");
+        return null;
+      },
+
+      componentWillMount:function(){
+        // 在render之前执行
+        console.log("componentWillMount");
+      },
+
+      render:function(){
+        // 渲染并返回一个虚拟DOM
+        console.log("render");
+        return <h1>Hello React</h1>
+      },
+
+      componentDidMount:function(){
+        // 在render 之后调用
+        // 在该方法中，React会使用render方法返回的虚拟的DOM对象创建真实的DOM结构
+        // 可以在这个方法中读取DOM节点
+        console.log("componentDidMount");
+      },
+
+      /*
+         三，更新阶段
+          流程
+            componnetWillReceiveProps
+            shouldComponentUpdate  如果返回值为false, 后三个方法不执行
+            componentWillUpdate
+            render
+            componentDidUpdate
+      */
+
+      componentWillReceiveProps:function(){
+        console.log("componentWillReceiveProps");
+      },
+
+      shouldComponentUpdate:function(){
+        console.log("sholdComponentUpdate");
+        return false;
+      },
+
+      // 此处穿插 render 方法  因为上面已经写了方法，此处省略
+
+      componentWillUpdate:function () {
+        console.log("componentWillUpdate");
+      },
+
+      componentDidUpdate:function(){
+        console.log("componentDidUpdate");
+      },
+
+
+      /*
+        四， 销毁阶段
+          流程：
+            componentWillUnmount
+      */
+
+      componentWillUnmount:function(){
+        console.log("componentWillUnmount");
+      },
+
+    });
+
+    // 第一次创建并加载组件
+    ReactDOM.render(
+      <Demo />,
+      document.getElementById("container")
+    );
+
+    // 再次调用上面的方法,重新渲染组件
+    ReactDOM.render(
+      <Demo />,
+      document.getElementById("container")
+    );
+
+    // 移除组件
+    ReactDOM.unmountComponentAtNode(document.getElementById("container"));
+
+
+// 允许刷新的是偶
+
+      getDefaultProps
+      getInitialState
+      componentWillMount
+      render
+      componentDidMount
+      componentWillReceiveProps
+      sholdComponentUpdate      // 即这个方法返回 true
+      componentWillUpdate
+      render
+      componentDidUpdate
+
+
+//   不允许再次更新
+      getDefaultProps
+      getInitialState
+      componentWillMount
+      render
+      componentDidMount
+      componentWillReceiveProps
+      sholdComponentUpdate        // 即这个方法返回 false
+
+
+//   移除组件
+
+      getDefaultProps
+      getInitialState
+      componentWillMount
+      render
+      componentDidMount
+      componentWillReceiveProps
+      sholdComponentUpdate        // 返回的为 false
+      componentWillUnmount
+
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
