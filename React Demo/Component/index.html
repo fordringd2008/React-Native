@@ -17,7 +17,7 @@
 
   <style>
     .pStyle{
-      font-size: 20px;
+      font-size: 34px;
     }
   </style>
 
@@ -67,35 +67,11 @@
   // );
 
 
-/*
-  注意事项：在React 和 H5中设置央视的格式有区别
 
-  1，H5中以；结尾
-     React以，结尾
-
-  2，H5中 key,value 都不加引号
-    React中属于 js对象，key的名字不能出现“—”， 需要使用驼峰命名法，
-    如果value为字符串，需要加引号
-
-  3，H5中 value如果是数字，需要带单位
-    React中不需要带单位
-
-*/
-
-
-/*
-
-	组件的样式
-  1，内联样式
-  2，对象样式
-  3，选择器样式
-
-*/
-
-  var hStyle = {
-    backgroundColor:"green",
-    color:"red"
-  };
+  // var hStyle = {
+  //   backgroundColor:"green",
+  //   color:"red"
+  // };
 
 
   // var ShowMessage = React.createClass({
@@ -124,23 +100,16 @@
 
 
 
-var ShowMessage = React.createClass({
-  render:function(){
-    return <h1>那个sss</h1>;
-  }
-});
-
-
-
-
-
-
-
-
-  ReactDOM.render(
-    <ShowMessage />,
-    document.getElementById("container")
-  );
+// var ShowMessage = React.createClass({
+//   render:function(){
+//     return <h1>那个sss</h1>;
+//   }
+// });
+//
+//   ReactDOM.render(
+//     <ShowMessage />,
+//     document.getElementById("container")
+//   );
 
 
   // var text = "ddd"
@@ -170,6 +139,74 @@ var ShowMessage = React.createClass({
   //   <h1>{text}</h1>
   //   document.getElementById("container")
   // )
+
+
+    /*
+
+    	组件的样式
+      1，内联样式
+      2，对象样式
+      3，选择器样式
+
+    */
+
+  /*
+    注意事项：在React 和 H5中设置央视的格式有区别
+
+    1，H5中以；结尾
+       React以，结尾
+
+    2，H5中 key,value 都不加引号
+      React中属于 js对象，key的名字不能出现“—”， 需要使用驼峰命名法，
+      如果value为字符串，需要加引号
+
+    3，H5中 value如果是数字，需要带单位
+      React中不需要带单位
+
+  */
+  // var ShowMessage = React.createClass({
+  //   render:function(){
+  //     return <h1>那个sss</h1>;
+  //   }
+  // });
+  //
+  //   ReactDOM.render(
+  //     <ShowMessage />,
+  //     document.getElementById("container")
+  //   );
+
+ /*
+
+ 
+
+ */
+
+
+  var hStyle = {
+    backgroundColor:"green",
+    color:"red"
+  };
+
+  var ShowMessage = React.createClass({
+    render:function(){
+      return <div style={{
+                          backgroundColor:"yellow",
+                          borderWidth:1,
+                          borderColor:"black",
+                          borderStyle:"solid"}}>
+          <h1 style={hStyle}>
+              {this.props.firstRow}
+          </h1>
+          <p className="pStyle"> {this.props.secondRow}</p>
+      </div>;
+    }
+  });
+
+  ReactDOM.render(
+    <ShowMessage firstRow="Hello" secondRow="DDDDDD" />,
+    document.getElementById("container")
+  );
+
 
 
 
