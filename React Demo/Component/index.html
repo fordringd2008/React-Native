@@ -177,11 +177,11 @@
 
  /*
 
- 
+ 在React中使用，class-> className,   for -> htmlfor
 
  */
 
-
+/*
   var hStyle = {
     backgroundColor:"green",
     color:"red"
@@ -206,6 +206,57 @@
     <ShowMessage firstRow="Hello" secondRow="DDDDDD" />,
     document.getElementById("container")
   );
+
+*/
+
+
+
+/*
+    复合组件，组合组件
+
+    多个组件组成一个组件
+*/
+
+/*
+  需求：WebShow
+  功能：输出网站的名字和网址，网址是一个可以点击的链接
+
+  子组件：WebName :负责显示网站的名字
+  子组件：WebLink: 负责显示网站的地址，并且可以点击
+
+*/
+
+  var WebName = React.createClass({
+    render:function(){
+      return <div>百度</div>;
+    }
+  });
+
+  var WebLink = React.createClass({
+    render:function(){
+      return <a href="www.baidu.com">www.baidu.com</a>;
+    }
+  });
+
+
+  var WebShow = React.createClass({
+    render:function(){
+      return (
+          <div>
+              <WebName />
+              <WebLink />
+          </div>
+      );
+    }
+  });
+
+  ReactDOM.render(
+    <WebShow />,
+    // <WebName />,
+    document.getElementById("container")
+  );
+
+
 
 
 

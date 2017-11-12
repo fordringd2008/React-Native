@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+  <!-- 核心库 -->
+  <script src="./build/react.js" charset="utf-8"></script>
+
+  <!-- 提供与dom相关的功能 -->
+  <script src="./build/react-dom.js" charset="utf-8"></script>
+
+  <!-- 本地的 -->
+  <script src="./build/browser.min.js" charset="utf-8"></script>
+
+
+  </head>
+  <body>
+      <div id="container"></div>
+  </body>
+
+   <!-- 使用 JSX, 跟 JavaScript不兼容，是使用JSX的地方，要设置type:text、babel -->
+  <script type="text/babel">
+
+
+  var WebName = React.createClass({
+    render:function(){
+      return <div>百度</div>;
+    }
+  });
+
+  var WebLink = React.createClass({
+    render:function(){
+      return <a href="www.baidu.com">www.baidu.com</a>;
+    }
+  });
+
+
+  var WebShow = React.createClass({
+    render:function(){
+      return (
+          <div>
+              <WebName />
+              <WebLink />
+          </div>
+      );
+    }
+  });
+
+  ReactDOM.render(
+    <WebShow />,
+    // <WebName />,
+    document.getElementById("container")
+  );
+
+    // ReactDOM.render(
+    //   <div>111</div>,
+    //   document.getElementById("container")
+    // );
+
+
+  /*
+
+    传值，一般有 props, state
+
+    props 是组件自身的属性，一般用于嵌套的内外层组件中，负责传递信息（一般是由父层组件向子层组件传递）
+    注意：props 传递信息必须保持一致，并且不要修改
+
+  */
+
+  /*
+    需求：WebShow
+    功能：输出网站的名字和网址，网址是一个可以点击的链接
+
+    子组件：WebName :负责显示网站的名字
+    子组件：WebLink: 负责显示网站的地址，并且可以点击
+
+  */
+
+
+  // var WebName = React.createClass({
+  //   render:function(){
+  //     return <div>百度</div>;
+  //   }
+  // });
+
+
+  // var WebLink = React.createClass({
+  //   render:function () {
+  //     return <a>www.baidu.com</a>; //  href="www.baidu.com"
+  //   }
+  // });
+  //
+  // var WebShow = React.createClass({
+  //   render:function(){
+  //     return (
+  //       <div>
+  //           <WebName />
+  //           <WebLink />
+  //       </div>
+  //     );
+  //   }
+  // });
+
+  // ReactDOM.render(
+  //   // <WebShow />,
+  //   <WebName />,
+  //   document.getElementById("container")
+  // );
+
+  ReactDOM.render(
+    <h1>11111</h1>,
+    document.getElementById("container")
+  );
+
+// <WebShow />,
+
+  
+
+
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
