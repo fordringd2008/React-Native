@@ -60,16 +60,16 @@
   {...this.props} 可以复制所有父组件的值
 */
 
-  var Link = React.createClass({
-    render:function(){
-      return <a {...this.props}>{this.props.name}</a>;
-    }
-  });
-
-  ReactDOM.render(
-    <Link href="http:///www.baidu.com" name="百度" />,
-    document.getElementById("container")
-  );
+  // var Link = React.createClass({
+  //   render:function(){
+  //     return <a {...this.props}>{this.props.name}</a>;
+  //   }
+  // });
+  //
+  // ReactDOM.render(
+  //   <Link href="http:///www.baidu.com" name="百度" />,
+  //   document.getElementById("container")
+  // );
 
 
   /*
@@ -121,9 +121,46 @@
   //   document.getElementById("container")
   // );
 
-  // ReactDOM.render(
-  //   <h1>11111</h1>,
-  //   document.getElementById("container")
-  // );
+
+/*
+
+  this.props.children 用法
+
+*/
+
+
+  var ListContent = React.createClass({
+      render:function(){
+        return(
+          <ul>
+          {
+            /*
+              列表项数量和内容不确定，在创建时才确定
+            */
+
+            React.Children.map(this.props.children, function(child){
+                return <li>{child}</li>;
+            })
+          }
+          </ul>
+        );
+      }
+    })
+
+  ReactDOM.render(
+    (
+      <ListContent>
+        <h1>这是标题</h1>
+        <a href="http://www.baidu.com">http://www.baidu.com</a>
+      </ListContent>
+    ),
+    document.getElementById("container")
+  );
+
+
+
+
+
+
   </script>
 </html>
