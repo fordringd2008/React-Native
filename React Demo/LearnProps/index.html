@@ -130,33 +130,65 @@
 
 
 
+  //
+  // var ListContent = React.createClass({
+  //     render:function(){
+  //       return(
+  //         <ul>
+  //         {
+  //           /*
+  //             列表项数量和内容不确定，在创建时才确定
+  //           */
+  //           React.Children.map(this.props.children, function(child){
+  //               return <li>{child}</li>;
+  //           })
+  //         }
+  //         </ul>
+  //       );
+  //     }
+  //   })
+  //
+  // ReactDOM.render(
+  //   (
+  //     <ListContent>
+  //       <h1>这是标题</h1>
+  //       <a href="http://www.baidu.com">http://www.baidu.com</a>
+  //     </ListContent>
+  //   ),
+  //   document.getElementById("container")
+  // );
 
-  var ListContent = React.createClass({
-      render:function(){
-        return(
-          <ul>
-          {
-            /*
-              列表项数量和内容不确定，在创建时才确定
-            */
-            React.Children.map(this.props.children, function(child){
-                return <li>{child}</li>;
-            })
-          }
-          </ul>
-        );
-      }
-    })
 
-  ReactDOM.render(
-    (
-      <ListContent>
-        <h1>这是标题</h1>
-        <a href="http://www.baidu.com">http://www.baidu.com</a>
-      </ListContent>
-    ),
-    document.getElementById("container")
-  );
+/*
+  属性验证
+  propTypes
+
+  React.PropTypes.string.isRequired
+
+  对传入的值进行验证
+*/
+
+var ShowTitle = React.createClass({
+  propTypes:{
+    title : React.PropTypes.string.isRequired
+  },
+  render:function(){
+    return <h1>{this.props.title}</h1>;
+  }
+});
+
+ReactDOM.render(
+  <ShowTitle title=1234 />,
+  document.getElementById("container")
+);
+
+
+
+
+
+
+
+
 
 
 
