@@ -129,6 +129,8 @@
 */
 
 
+
+
   var ListContent = React.createClass({
       render:function(){
         return(
@@ -137,7 +139,6 @@
             /*
               列表项数量和内容不确定，在创建时才确定
             */
-
             React.Children.map(this.props.children, function(child){
                 return <li>{child}</li>;
             })
