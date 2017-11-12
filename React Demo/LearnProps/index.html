@@ -168,19 +168,43 @@
   对传入的值进行验证
 */
 
+// var ShowTitle = React.createClass({
+//   propTypes:{
+//     title : React.PropTypes.string.isRequired
+//   },
+//   render:function(){
+//     return <h1>{this.props.title}</h1>;
+//   }
+// });
+//
+// ReactDOM.render(
+//   <ShowTitle title=1234 />,
+//   document.getElementById("container")
+// );
+
+
+/*
+  设置属性默认值
+
+  getPropTy
+*/
+
 var ShowTitle = React.createClass({
-  propTypes:{
-    title : React.PropTypes.string.isRequired
+  getDefaultProps:function() {
+    return {
+      title : "这是默认标题"
+    };
   },
-  render:function(){
+  render:function () {
     return <h1>{this.props.title}</h1>;
   }
 });
 
 ReactDOM.render(
-  <ShowTitle title=1234 />,
+  <ShowTitle name="1234" />,
   document.getElementById("container")
 );
+
 
 
 
