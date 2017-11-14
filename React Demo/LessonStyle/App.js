@@ -43,12 +43,15 @@ const instructions = Platform.select({
 
 export default class App extends Component<{}>{
   render(){
+    // 样式表的拼接和 样式的优先级
+    // 这里注意，注释不能写在 组件内部
     return (
+      // 这里注意，注释不能写在 <View></View> 之间，否则会加载错误
       <View style={styles.container}>
-        // 样式表的拼接和 样式的优先级
-        <View style={[styles.top, styles.border, { borderWidth:7 }
-        ]}>
+
+        <View style={[styles.top, styles.border, { borderWidth:7 }]}>
         </View>
+
         <View style={[styles.bottom, styles.border]}>
         </View>
       </View>
