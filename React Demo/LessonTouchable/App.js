@@ -13,6 +13,7 @@ import {
   TouchableOpacity,         // 这里要引入需要的系统组件
   TouchableHighlight,         // 这里要引入需要的系统组件
   TouchableWithoutFeedback,         // 这里要引入需要的系统组件
+  TextInput,
 } from 'react-native';
 
 /*
@@ -33,28 +34,83 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
+/*
+  TextInput 是一个允许用户在应用中通过键盘输入文本的基本组件。
+  提供了多种属性的配置，例如自动完成，自动大小写，占位文字，以及多种不同类型的键盘等等，
+  常用的：
+  placeholder 占位符
+  value 输入框的值
+  password 是否是密文输入
+  editable 是否可以编辑
+  returnKeyType 键盘return键类型
+  onChange 文本变化时调用
+  onEndEditing 结束编辑时调用
+  onSubmitEditing 结束编辑，点击提交按钮时调用
+
+*/
+
+
 
 export default class App extends Component<{}> {
-  btnClick(){
-    alert("点击了搜索按钮");
+
+
+  // ES5 的写法
+  // getInitialState(){
+  //   return {
+  //     inputText:"ddd"
+  //   };
+  // }
+
+  // ES6中的写法，代替了  getInitialState
+  constructor(props){
+    super(props);
+
+    // 这两种方式都可以
+    // this.state = {
+    //   inputText : "默认"
+    // }
+
+    this.setState({
+        inputText : "默认"
+    })
   }
+
+  btnClick(){
+    alert(this.state.inputText);
+  }
+
+  getContent(text){
+     alert(text);
+     this.setState({
+       inputText: text,
+     });
+  }
+
+
   render() {
     return (
       <View style={styles.container}>
         <View style={styles.flex}>
-          <View style={styles.input}></View>
+          {/*<View style={styles.input}></View>*/}
+          {/*this.getContent
+            value = { this.state.inputText }
+            onPress={this.show.bind(this, textString)}
+            */}
+          <TextInput style={styles.input}
+            placeholder="请输入"
+            returnKeyType="search"
+            onChangeText = { this.getContent.bind(this) }
+          ></TextInput>
         </View>
 
         {/* 绑定事件 */}
 
-
         <TouchableOpacity style={styles.btn}
-          onPress={this.btnClick}>
+          onPress={this.btnClick.bind(this)}>
           <Text style={styles.search}>搜索</Text>
         </TouchableOpacity>
 
-
-                {/*
+          {/*
 
         <TouchableHighlight style={styles.btn}
           onPress={this.btnClick}>
@@ -67,9 +123,12 @@ export default class App extends Component<{}> {
           onPress={this.btnClick}>
           <Text style={styles.search}>搜索1111</Text>
         </TouchableWithoutFeedback>
-*/}
+          */}
 
       </View>
+
+
+
     );
   }
 }
