@@ -61,19 +61,28 @@ export default class App extends Component<{}> {
   //   };
   // }
 
+  // 注意这里 构造函数的时候，state 还未初始化
+
   // ES6中的写法，代替了  getInitialState
-  constructor(props){
-    super(props);
+  // constructor(props){
+  //   super(props);
+  //
+  //   // 这两种方式都可以
+  //   // this.state = {
+  //   //   inputText : "默认"
+  //   // }
+  //
+  //   this.setState({
+  //       inputText : "默认"
+  //   })
+  // }
 
-    // 这两种方式都可以
-    // this.state = {
-    //   inputText : "默认"
-    // }
-
+  componentDidMount(){
     this.setState({
         inputText : "默认"
     })
   }
+
 
   btnClick(){
     alert(this.state.inputText);
