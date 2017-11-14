@@ -1,0 +1,1 @@
+运行Demo中的测试项目的时候，需要把node_modules.zip解压到项目根目录中，即 ios, android的同级目录
