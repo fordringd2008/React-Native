@@ -21,13 +21,21 @@ const instructions = Platform.select({
 
 // 引入组件
 var Header = require("./Header");
+var News  = require("./News");
 
 export default class App extends Component<{}> {
   render() {
+    var news = [
+      "1，Double tap R ",
+      "2，Double tap R on your keyboard to reload",
+      "3，Double tap R on your keyboard to reloadDouble tap R on your keyboard to reload",
+      "4，Double tap R on your keyboard to reloadDouble tap R on your keyboard to reloadDouble tap R on your keyboard to reload",
+    ];
     return (
       //ddd
       <View style={styles.flex}>
         <Header></Header>
+        <News news={news}></News>
       {/* header */}
       {/* news */}
       </View>
