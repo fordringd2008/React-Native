@@ -19,21 +19,14 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-// var MyScrollView = require(".myScrollView");
+var MyScrollView = require("./myScrollView");
+
 
 export default class App extends Component<{}> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
+        <MyScrollView  style={styles.scrollView}/>
       </View>
     );
   }
@@ -46,9 +39,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
+  scrollView: {
+    flex:1,
+    width:375,
     margin: 10,
   },
   instructions: {

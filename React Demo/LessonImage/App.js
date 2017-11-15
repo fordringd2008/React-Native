@@ -38,6 +38,8 @@ export default class App extends Component<{}> {
     // var data={src:require('./Images/11111.png')}
     // source={require('./image/big_star.png')
     // source={require("image!lefborder")}
+    // ./ios/LessonImage/Images/testImage.imageset/testImage.png
+    // 注意这里的本地图片加载失败
     return (
 
       <View style={styles.container}>
@@ -48,7 +50,7 @@ export default class App extends Component<{}> {
         </View>
         <View style={styles.local}>
           <Image style={styles.localImage}
-                source={require('image!testImage')}
+                source={require('./ios/LessonImage/Images/testImage.imageset/testImage.png')}
                  />
         </View>
 
