@@ -9,7 +9,8 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  ScrollView
 } from 'react-native';
 
 const instructions = Platform.select({
@@ -19,14 +20,14 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-var MyScrollView = require("./myScrollView");
-
+// var MyScrollView = require("./myScrollView");
+var MovieList    = require("./movieList");
 
 export default class App extends Component<{}> {
   render() {
     return (
       <View style={styles.container}>
-        <MyScrollView  style={styles.scrollView}/>
+        <MovieList></MovieList>
       </View>
     );
   }
