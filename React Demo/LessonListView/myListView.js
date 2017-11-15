@@ -47,14 +47,6 @@ var contents = [
 
 export default class MyListView extends Component<{}> {
 
-
-  // getInitialState(){
-  //   var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-  //   return {
-  //     dataSource: ds.cloneWithRows(contents),
-  //   };
-  // }
-
   // 构造方法
   constructor(props){
     super(props);

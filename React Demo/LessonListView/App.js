@@ -20,11 +20,12 @@ const instructions = Platform.select({
 });
 
 var MyListView = require("./myListView");
+var MovieList = require("./movieList");
 
 export default class App extends Component<{}> {
   render() {
     return (
-      <MyListView />
+      <MovieList />
     );
   }
 }
