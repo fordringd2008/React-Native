@@ -66,6 +66,7 @@ class MyScene extends Component {
 
     // 绑定方法
     // _onChange = (text) => {
+    //     // event.nativeEvent.text
     //     this.setState({
     //         textInputString: text
     //     })

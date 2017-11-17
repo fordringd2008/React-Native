@@ -1,0 +1,3 @@
+rootProject.name = 'LessonTabBarIOS'
+
+include ':app'
