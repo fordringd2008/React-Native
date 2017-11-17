@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d4703169-e003-47df-9827-b3240e31b207" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/LessonNavigator/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="148">
+              <caret line="74" column="34" lean-forward="true" selection-start-line="74" selection-start-column="34" selection-end-line="74" selection-end-column="34" />
+              <folding>
+                <marker date="1510904208000" expanded="false" signature="9:177" ph="..." />
+                <marker date="1510904208000" expanded="true" signature="179:214" ph="//..." />
+                <marker date="1510904208000" expanded="true" signature="262:852" ph="{...}" />
+                <marker date="1510904208000" expanded="true" signature="277:850" ph="{...}" />
+                <marker date="1510904208000" expanded="true" signature="287:568" ph="//..." />
+                <marker date="1510904208000" expanded="true" signature="642:795" ph="{...}" />
+                <marker date="1510904208000" expanded="true" signature="887:2456" ph="{...}" />
+                <marker date="1510904208000" expanded="true" signature="893:1023" ph="//..." />
+                <marker date="1510904208000" expanded="true" signature="1058:1267" ph="{...}" />
+                <marker date="1510904208000" expanded="true" signature="1216:1260" ph="{&quot;textInputString&quot;: &quot; &quot;...}" />
+                <marker date="1510904208000" expanded="true" signature="1287:1446" ph="{...}" />
+                <marker date="1510904208000" expanded="true" signature="1324:1438" ph="{&quot;component&quot;: MyView...}" />
+                <marker date="1510904208000" expanded="true" signature="1453:1579" ph="//..." />
+                <marker date="1510904208000" expanded="true" signature="1596:1696" ph="{...}" />
+                <marker date="1510904208000" expanded="true" signature="1642:1688" ph="{&quot;textInputString&quot;: &quot;222&quot;...}" />
+                <marker date="1510904208000" expanded="true" signature="1704:1783" ph="//..." />
+                <marker date="1510904208000" expanded="true" signature="1797:2454" ph="{...}" />
+                <marker date="1510904208000" expanded="true" signature="2490:3947" ph="{...}" />
+                <marker date="1510904208000" expanded="true" signature="2525:2579" ph="{...}" />
+                <marker date="1510904208000" expanded="true" signature="2595:2638" ph="{...}" />
+                <marker date="1510904208000" expanded="true" signature="2653:3945" ph="{...}" />
+                <marker date="1510904208000" expanded="true" signature="2710:2822" ph="{&quot;component&quot;: MyView...}" />
+                <marker date="1510904208000" expanded="true" signature="3090:3332" ph="{...}" />
+                <marker date="1510904208000" expanded="true" signature="3595:3837" ph="{...}" />
+                <marker date="1510904208000" expanded="true" signature="3983:4422" ph="{...}" />
+                <marker date="1510904208000" expanded="true" signature="4000:4183" ph="{&quot;alignItems&quot;: 'center'...}" />
+                <marker date="1510904208000" expanded="true" signature="4194:4217" ph="{...}" />
+                <marker date="1510904208000" expanded="true" signature="4240:4318" ph="{&quot;textAlign&quot;: 'center'...}" />
+                <marker date="1510904208000" expanded="true" signature="4332:4419" ph="{&quot;textAlign&quot;: 'center'...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LessonScrollView/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="31" column="6" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="31" selection-end-column="6" />
+              <folding>
+                <marker date="1510729617000" expanded="true" signature="0:87" ph="/** Sample React Native App ...*/" />
+                <marker date="1510729617000" expanded="false" signature="96:217" ph="..." />
+                <marker date="1510729617000" expanded="true" signature="256:435" ph="{...}" />
+                <marker date="1510729617000" expanded="true" signature="579:703" ph="{...}" />
+                <marker date="1510729617000" expanded="true" signature="592:701" ph="{...}" />
+                <marker date="1510729617000" expanded="true" signature="738:1017" ph="{...}" />
+                <marker date="1510729617000" expanded="true" signature="753:859" ph="{&quot;justifyContent&quot;: 'center'...}" />
+                <marker date="1510729617000" expanded="true" signature="875:923" ph="{...}" />
+                <marker date="1510729617000" expanded="true" signature="941:1014" ph="{&quot;textAlign&quot;: 'center'...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LearnState/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="930">
+              <caret line="62" column="24" lean-forward="false" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>_onChange</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/LessonNavigator/App.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/LessonNavigator/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="44" />
+    <option name="y" value="23" />
+    <option name="width" value="1378" />
+    <option name="height" value="837" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="React Demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="React Demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path" value="/usr/local/Cellar/node/7.8.0/bin/node" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d4703169-e003-47df-9827-b3240e31b207" name="Default" comment="" />
+      <created>1510901023130</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1510901023130</updated>
+      <workItem from="1510901029055" duration="2200000" />
+      <workItem from="1510904173163" duration="131000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2331000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="44" y="23" width="1378" height="837" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22859216" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/LessonNavigator/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1510904208000" expanded="false" signature="9:177" ph="..." />
+            <marker date="1510904208000" expanded="true" signature="179:214" ph="//..." />
+            <marker date="1510904208000" expanded="true" signature="262:852" ph="{...}" />
+            <marker date="1510904208000" expanded="true" signature="277:850" ph="{...}" />
+            <marker date="1510904208000" expanded="true" signature="287:568" ph="//..." />
+            <marker date="1510904208000" expanded="true" signature="642:795" ph="{...}" />
+            <marker date="1510904208000" expanded="true" signature="887:2456" ph="{...}" />
+            <marker date="1510904208000" expanded="true" signature="893:1023" ph="//..." />
+            <marker date="1510904208000" expanded="true" signature="1058:1267" ph="{...}" />
+            <marker date="1510904208000" expanded="true" signature="1216:1260" ph="{&quot;textInputString&quot;: &quot; &quot;...}" />
+            <marker date="1510904208000" expanded="true" signature="1287:1446" ph="{...}" />
+            <marker date="1510904208000" expanded="true" signature="1324:1438" ph="{&quot;component&quot;: MyView...}" />
+            <marker date="1510904208000" expanded="true" signature="1453:1579" ph="//..." />
+            <marker date="1510904208000" expanded="true" signature="1596:1696" ph="{...}" />
+            <marker date="1510904208000" expanded="true" signature="1642:1688" ph="{&quot;textInputString&quot;: &quot;222&quot;...}" />
+            <marker date="1510904208000" expanded="true" signature="1704:1783" ph="//..." />
+            <marker date="1510904208000" expanded="true" signature="1797:2454" ph="{...}" />
+            <marker date="1510904208000" expanded="true" signature="2490:3947" ph="{...}" />
+            <marker date="1510904208000" expanded="true" signature="2525:2579" ph="{...}" />
+            <marker date="1510904208000" expanded="true" signature="2595:2638" ph="{...}" />
+            <marker date="1510904208000" expanded="true" signature="2653:3945" ph="{...}" />
+            <marker date="1510904208000" expanded="true" signature="2710:2822" ph="{&quot;component&quot;: MyView...}" />
+            <marker date="1510904208000" expanded="true" signature="3090:3332" ph="{...}" />
+            <marker date="1510904208000" expanded="true" signature="3595:3837" ph="{...}" />
+            <marker date="1510904208000" expanded="true" signature="3983:4422" ph="{...}" />
+            <marker date="1510904208000" expanded="true" signature="4000:4183" ph="{&quot;alignItems&quot;: 'center'...}" />
+            <marker date="1510904208000" expanded="true" signature="4194:4217" ph="{...}" />
+            <marker date="1510904208000" expanded="true" signature="4240:4318" ph="{&quot;textAlign&quot;: 'center'...}" />
+            <marker date="1510904208000" expanded="true" signature="4332:4419" ph="{&quot;textAlign&quot;: 'center'...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LessonScrollView/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="31" column="6" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="31" selection-end-column="6" />
+          <folding>
+            <marker date="1510729617000" expanded="true" signature="0:87" ph="/** Sample React Native App ...*/" />
+            <marker date="1510729617000" expanded="false" signature="96:217" ph="..." />
+            <marker date="1510729617000" expanded="true" signature="256:435" ph="{...}" />
+            <marker date="1510729617000" expanded="true" signature="579:703" ph="{...}" />
+            <marker date="1510729617000" expanded="true" signature="592:701" ph="{...}" />
+            <marker date="1510729617000" expanded="true" signature="738:1017" ph="{...}" />
+            <marker date="1510729617000" expanded="true" signature="753:859" ph="{&quot;justifyContent&quot;: 'center'...}" />
+            <marker date="1510729617000" expanded="true" signature="875:923" ph="{...}" />
+            <marker date="1510729617000" expanded="true" signature="941:1014" ph="{&quot;textAlign&quot;: 'center'...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LearnState/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="62" column="24" lean-forward="false" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LearnState/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="62" column="24" lean-forward="false" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LessonScrollView/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="31" column="6" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="31" selection-end-column="6" />
+          <folding>
+            <marker date="1510729617000" expanded="true" signature="0:87" ph="/** Sample React Native App ...*/" />
+            <marker date="1510729617000" expanded="false" signature="96:217" ph="..." />
+            <marker date="1510729617000" expanded="true" signature="256:435" ph="{...}" />
+            <marker date="1510729617000" expanded="true" signature="579:703" ph="{...}" />
+            <marker date="1510729617000" expanded="true" signature="592:701" ph="{...}" />
+            <marker date="1510729617000" expanded="true" signature="738:1017" ph="{...}" />
+            <marker date="1510729617000" expanded="true" signature="753:859" ph="{&quot;justifyContent&quot;: 'center'...}" />
+            <marker date="1510729617000" expanded="true" signature="875:923" ph="{...}" />
+            <marker date="1510729617000" expanded="true" signature="941:1014" ph="{&quot;textAlign&quot;: 'center'...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LessonNavigator/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="74" column="34" lean-forward="true" selection-start-line="74" selection-start-column="34" selection-end-line="74" selection-end-column="34" />
+          <folding>
+            <marker date="1510904208000" expanded="false" signature="9:177" ph="..." />
+            <marker date="1510904208000" expanded="true" signature="179:214" ph="//..." />
+            <marker date="1510904208000" expanded="true" signature="262:852" ph="{...}" />
+            <marker date="1510904208000" expanded="true" signature="277:850" ph="{...}" />
+            <marker date="1510904208000" expanded="true" signature="287:568" ph="//..." />
+            <marker date="1510904208000" expanded="true" signature="642:795" ph="{...}" />
+            <marker date="1510904208000" expanded="true" signature="887:2456" ph="{...}" />
+            <marker date="1510904208000" expanded="true" signature="893:1023" ph="//..." />
+            <marker date="1510904208000" expanded="true" signature="1058:1267" ph="{...}" />
+            <marker date="1510904208000" expanded="true" signature="1216:1260" ph="{&quot;textInputString&quot;: &quot; &quot;...}" />
+            <marker date="1510904208000" expanded="true" signature="1287:1446" ph="{...}" />
+            <marker date="1510904208000" expanded="true" signature="1324:1438" ph="{&quot;component&quot;: MyView...}" />
+            <marker date="1510904208000" expanded="true" signature="1453:1579" ph="//..." />
+            <marker date="1510904208000" expanded="true" signature="1596:1696" ph="{...}" />
+            <marker date="1510904208000" expanded="true" signature="1642:1688" ph="{&quot;textInputString&quot;: &quot;222&quot;...}" />
+            <marker date="1510904208000" expanded="true" signature="1704:1783" ph="//..." />
+            <marker date="1510904208000" expanded="true" signature="1797:2454" ph="{...}" />
+            <marker date="1510904208000" expanded="true" signature="2490:3947" ph="{...}" />
+            <marker date="1510904208000" expanded="true" signature="2525:2579" ph="{...}" />
+            <marker date="1510904208000" expanded="true" signature="2595:2638" ph="{...}" />
+            <marker date="1510904208000" expanded="true" signature="2653:3945" ph="{...}" />
+            <marker date="1510904208000" expanded="true" signature="2710:2822" ph="{&quot;component&quot;: MyView...}" />
+            <marker date="1510904208000" expanded="true" signature="3090:3332" ph="{...}" />
+            <marker date="1510904208000" expanded="true" signature="3595:3837" ph="{...}" />
+            <marker date="1510904208000" expanded="true" signature="3983:4422" ph="{...}" />
+            <marker date="1510904208000" expanded="true" signature="4000:4183" ph="{&quot;alignItems&quot;: 'center'...}" />
+            <marker date="1510904208000" expanded="true" signature="4194:4217" ph="{...}" />
+            <marker date="1510904208000" expanded="true" signature="4240:4318" ph="{&quot;textAlign&quot;: 'center'...}" />
+            <marker date="1510904208000" expanded="true" signature="4332:4419" ph="{&quot;textAlign&quot;: 'center'...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
