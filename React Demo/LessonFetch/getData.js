@@ -110,16 +110,29 @@ function postRequst(url, opts) {
 
 // http://www.shenzhenxinrui.top:8080/zhjf-v2/user/session/13510886027
 
-// Put 请求
+// Put 请求  这里未搞定
 function putRequst(url, opts) {
 
   let formData= new FormData();
   formData.append("username", "react-native");
   formData.append("password", "23232");
 
+  let myHeader = new Headers({
+    "Content-Type": "text/plain",
+    // "Content-Length": content.length.toString(),
+    // "X-Custom-Header": "ProcessThisImmediately",
+    "token" : "ad56adaef1a588e3b01c625e16ff78c2",
+    "Accept-Language" : "en;q=1",
+    "currTime" : "1510969517000",
+    "userId" : "13510886027",
+    "User-Agent" : "SmartMunicipal170615\/1.0.5011132 (iPhone; iOS 11.1; Scale\/2.00)"
+  });
+
+
   var opts = {
     method:'PUT',
     body:formData,
+    header:myHeader
   };
 
   fetch(url, opts)

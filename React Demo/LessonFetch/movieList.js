@@ -14,10 +14,10 @@ import {
   Image,
 } from 'react-native';
 
-var movieData = require("./data.json");
+// var movieData = require("./data.json");
 
 // 原始数据
-var movies = movieData.movies;
+// var movies = movieData.movies;
 
 export default class MovieList extends Component<{}> {
 
@@ -29,17 +29,19 @@ export default class MovieList extends Component<{}> {
     });
 
     this.state = {
-      dataSource: ds.cloneWithRows(movies)
+      dataSource: ds.cloneWithRows(this.props.movies)
     };
   }
 
-  // 渲染头部
-  _renderRow(movie){
+  // 渲染row
+  _renderRow(movie, sectionID, rowID){
+    var key = sectionID + rowID;
+    console.log("key" + key);
     return (
-      <View style={styles.row}>
+      <View style={styles.row} key={ key }>
         <Image
-          style={styles.thumbnail}
-          source={{uri:movie.posters.thumbnail}}
+            style={styles.thumbnail}
+            source={{uri:movie.posters.thumbnail}}
           ></Image>
         <View  style={styles.rightContainer}>
           <Text  style={styles.title}>{movie.title}</Text>
@@ -49,12 +51,27 @@ export default class MovieList extends Component<{}> {
     );
   }
 
+  // _renderRow(movie){
+  //   return (
+  //     <View style={styles.row}>
+  //       <Image
+  //         style={styles.thumbnail}
+  //         source={{uri:movie.posters.thumbnail}}
+  //       ></Image>
+  //       <View  style={styles.rightContainer}>
+  //         <Text  style={styles.title}>{movie.title}</Text>
+  //         <Text  style={styles.year}>{movie.year}</Text>
+  //       </View>
+  //     </View>
+  //   );
+  // }
+
   // 渲染头部
-  _renderHeader(){
+  _renderHeader(sectionData, sectionID){
     {/* 分割线 */}
     return (
-      <View  style={styles.header}>
-        <Text  style={styles.header_text}>这是HeaderView</Text>
+      <View  style={styles.header} key={ sectionID }>
+        <Text  style={styles.header_text}>这是HeaderView + { sectionID }</Text>
         <View  style={styles.separator}></View>
       </View>
     );
@@ -64,7 +81,7 @@ export default class MovieList extends Component<{}> {
   _renderSeparator(sectionID:number, rowID: number){
     return (
       <View  style={styles.separator}
-        key={sectionID+rowID}></View>
+        key={sectionID +rowID}></View>
     );
   }
 
@@ -78,9 +95,10 @@ export default class MovieList extends Component<{}> {
       <ListView
         style={styles.listView}
         dataSource= {this.state.dataSource}
-        renderRow = {this._renderRow}
-        renderHeader =  {this._renderHeader}
-        renderSeparator = {this._renderHeader}
+        renderRow = {this._renderRow }
+        // renderHeader =  {this._renderHeader}
+        renderSectionHeader={this._renderHeader}
+        renderSeparator = {this._renderSeparator}
         initialListSize={10}
       />
     );
