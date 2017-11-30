@@ -21,13 +21,14 @@ var Util      = require('../common/util');
 var SearchBar = require('../common/searchBar');
 var ServerURL = require('../common/server');
 var BookItem  = require('./book_item');
+var BookDetail = require('./book_detail');
 
 export default class BookList extends  Component<{}>{
 
   constructor(props){
     super(props);
     this.getData = this.getData.bind(this);
-    this._onPress = this._onPress.bind(this);
+    this._onPressSearchBtn = this._onPressSearchBtn.bind(this);
     this._onChangeText = this._onChangeText.bind(this);
     this._keyExtractor = this._keyExtractor.bind(this);
     this._renderItem = this._renderItem.bind(this);
@@ -89,6 +90,12 @@ export default class BookList extends  Component<{}>{
     return item.id;
   }
 
+  _onPressItem(e){
+    alert(e.item.title);
+
+
+  }
+
   //renderItem: (info: {item: ItemT, index: number}) => ?React.Element<any>
   // return <BookItem book = { book }/>
 
@@ -96,8 +103,20 @@ export default class BookList extends  Component<{}>{
   /*book={ book }*/
 
   _renderItem(book){
+
+    /*
+    *
+    * 其onPressItem属性使用箭头函数而非bind的方式进行绑定，使其不会在每次列表重新render时生成一个新的函数，
+    * 从而保证了props的不变性（当然前提是 id、selected和title也没变），
+    * 不会触发自身无谓的重新render。换句话说，如果你是用bind来绑定onPressItem，
+    * 每次都会生成一个新的函数，导致props在===比较时返回false，从而触发自身的一次不必要的重新render。
+    * */
+
     return (
-      <BookItem book={ book }></BookItem>
+      <BookItem book={ book } onPress={ () => this._onPressItem(book) }
+
+
+      ></BookItem>
     )
   }
 
@@ -141,7 +160,7 @@ export default class BookList extends  Component<{}>{
   // *
 
   //点击事件
-  _onPress(){
+  _onPressSearchBtn(){
     this.getData();
   }
 
@@ -156,7 +175,7 @@ export default class BookList extends  Component<{}>{
     return(
       <ScrollView>
         <SearchBar placeHolder='搜索图书'
-                   onPress ={ this._onPress }
+                   onPress ={ this._onPressSearchBtn }
                    onChangeText={ this._onChangeText }
         ></SearchBar>
 

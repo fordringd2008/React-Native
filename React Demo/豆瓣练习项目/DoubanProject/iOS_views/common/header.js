@@ -28,11 +28,11 @@ export default class App extends Component<{}> {
     super(props);
     this._pop = this._pop.bind(this);
   }
-
-  // 传入的对象， 包括 backName(按钮名称)， barTitle
-  var headerContent = this.props.initObj;
-
   render() {
+
+    // 传入的对象， 包括 backName(按钮名称)， barTitle
+    var headerContent = this.props.initObj;
+
     return (
       <View style={styles.header}>
         <TouchableOpacity style={styles.left_btn}
