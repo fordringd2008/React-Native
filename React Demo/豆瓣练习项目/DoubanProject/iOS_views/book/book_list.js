@@ -142,12 +142,14 @@ export default class BookList extends  Component<{}>{
 
   //点击事件
   _onPress(){
-    alert('_onPress');
+    this.getData();
   }
 
   // 搜索文本变化事件
-  _onChangeText(){
-    alert('_onChangeText');
+  _onChangeText(text){
+    this.setState({
+      keyWords:text
+    });
   }
 
   render(){
