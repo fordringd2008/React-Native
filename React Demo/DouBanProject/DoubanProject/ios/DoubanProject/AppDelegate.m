@@ -18,7 +18,12 @@
 {
   NSURL *jsCodeLocation;
 
+#if TARGET_IPHONE_SIMULATOR
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
+#elif TARGET_OS_IPHONE
+  NSString *ip = @"http://192.168.0.21";
+  jsCodeLocation = [NSURL URLWithString:[NSString stringWithFormat:@"%@:8081/index.bundle?platform=ios&dev=true", ip]];
+#endif
 
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                       moduleName:@"DoubanProject"
