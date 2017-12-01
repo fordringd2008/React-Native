@@ -104,9 +104,9 @@ export default class BookList extends  Component<{}>{
       }
     };
 
-    alert(this.props.navigator);
+    // alert(this.props.navigator);
 
-    // this.props.navigator.push(detailRoute);
+    this.props.navigator.push(detailRoute);
 
   }
 

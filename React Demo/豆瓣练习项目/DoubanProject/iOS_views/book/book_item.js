@@ -38,7 +38,10 @@ export default class BookItem extends Component<{}> {
 
   render() {
 
+
     var book = this.props.book.item;
+
+    book = book ? book : this.props.book;
 
     console.log(book.image)
     console.log(book.title)

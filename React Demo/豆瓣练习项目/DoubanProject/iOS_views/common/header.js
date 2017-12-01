@@ -5,7 +5,7 @@
 *   外部传入：
 *
 *     navigator  点击按钮返回上一级页面
-*     initObj(backName, title) 返回按钮的名称，标题
+*     initObj(backName, barTitle) 返回按钮的名称，标题
 *
 * */
 
@@ -21,7 +21,7 @@ import {
 
 var Icon = require('./left_icon');
 
-export default class App extends Component<{}> {
+export default class Header extends Component<{}> {
 
 
   constructor(props){
@@ -32,6 +32,8 @@ export default class App extends Component<{}> {
 
     // 传入的对象， 包括 backName(按钮名称)， barTitle
     var headerContent = this.props.initObj;
+
+    // alert(headerContent);
 
     return (
       <View style={styles.header}>
@@ -54,9 +56,6 @@ export default class App extends Component<{}> {
   _pop(){
     this.props.navigator.pop();
   }
-
-
-
 }
 
 const styles = StyleSheet.create({
@@ -90,3 +89,7 @@ const styles = StyleSheet.create({
     width:200,
   },
 });
+
+
+module.exports = Header;
+

@@ -47,23 +47,25 @@ export default class BookDetail extends Component<{}> {
     var url = ServerURL.book_detail_id + this.props.bookID;
 
     Util.getRequst(url, (data)=>{
-      this.setState({
+
+      that.setState({
         bookData:data
       });
+
     }, (error)=>{
         alert(error);
     })
   }
 
   render() {
+
     return (
         <ScrollView style={styles.container}>
           {
             this.state.bookData ?
               <View>
-                <Header initObj={{ backName:'图书', barTitle:this.state.bookData.title }}
-                        navigator={ this.props.navigator }
-                />
+                {/*<Header initObj={{ backName:'图书', barTitle:this.state.bookData.title }}*/}
+                        {/*navigator={ this.props.navigator } />*/}
                 <BookItem book={ this.state.bookData } />
                 <View>
                   <Text style={styles.title}>图书简介</Text>
