@@ -14,13 +14,14 @@ import {
   TabBarIOS
 } from 'react-native';
 
+import Navigation from './iOS_views/common/navigation';
 import BookList from './iOS_views/book/book_list';
 
 let FirstNavTabTitle = '图书';
 let SecondNavTabTitle = '电影';
 
 // 隐藏电池栏
-StatusBar.setHidden(true);
+StatusBar.setHidden(false);
 
 export default class App extends Component<{}> {
 
@@ -40,20 +41,25 @@ export default class App extends Component<{}> {
   }
 
 
-render() {
+  render() {
+
     return (
       <TabBarIOS>
         <TabBarIOS.Item
           title= {FirstNavTabTitle}
           selected={this.state.selectedTab === FirstNavTabTitle}
           onPress={this._tabBarPress }
+          systemIcon='bookmarks'
         >
-          <BookList />
+          <Navigation compoment={ BookList }
+                      style={{ flex:1 }}
+          />
         </TabBarIOS.Item>
         <TabBarIOS.Item
           title={SecondNavTabTitle}
           selected={this.state.selectedTab === SecondNavTabTitle}
           onPress={this._tabBarPress }
+          systemIcon='favorites'
         >
           <View style={{flex:1, backgroundColor:'yellow'}}></View>
         </TabBarIOS.Item>

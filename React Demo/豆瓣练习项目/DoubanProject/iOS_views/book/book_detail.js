@@ -3,15 +3,8 @@
 *
 *   外部传入，
 *
-*   book     图书对象
-*   onPress  事件处理对象，通过 {...this.props}绑定，需要设置参数，即图书id
-*
-*   image 图书缩略图
-    title 图书名称
-    publisher 出版社
-    auther  作者
-    price  价格
-    pages  图书总页数
+*   bookID
+*   navigator
 *
 *
 * */
@@ -38,9 +31,28 @@ export default class BookDetail extends Component<{}> {
 
   constructor(props){
     super(props);
+
+    this.getData = this.getData.bind(this);
+
     this.state = {
       bookData:null       // 图书对象详情信息
     };
+  }
+
+  // 获取数据
+  getData(){
+
+    var that = this;
+
+    var url = ServerURL.book_detail_id + this.props.bookID;
+
+    Util.getRequst(url, (data)=>{
+      this.setState({
+        bookData:data
+      });
+    }, (error)=>{
+        alert(error);
+    })
   }
 
   render() {
@@ -49,7 +61,9 @@ export default class BookDetail extends Component<{}> {
           {
             this.state.bookData ?
               <View>
-                <Header initObj={{ backName:'图书', barTitle:this.state.bookData.title }}/>
+                <Header initObj={{ backName:'图书', barTitle:this.state.bookData.title }}
+                        navigator={ this.props.navigator }
+                />
                 <BookItem book={ this.state.bookData } />
                 <View>
                   <Text style={styles.title}>图书简介</Text>
@@ -64,6 +78,10 @@ export default class BookDetail extends Component<{}> {
           }
         </ScrollView>
     );
+  }
+
+  componentDidMount() {
+    this.getData();
   }
 }
 

@@ -2,8 +2,12 @@
 *   封装到导航器初始化设置
 *
 *   外部传入：
-*
 *     compoment:  需要展示的组件
+*
+*
+*
+*
+*   内部处理
 *     route 对象  必须添加compoment属性，如果需要还可以添加passPorps属性
 * */
 
@@ -29,13 +33,6 @@ export default class Navigation extends Component<{}> {
     this._pop = this._pop.bind(this);
   }
 
-  // 传入的对象， 包括 backName(按钮名称)， barTitle
-  var headerContent = this.props.initObj;
-
-  // 路由
-  var route = {
-    route : this.props.route,
-  };
 
   // 返回事件
   _pop(){
@@ -45,10 +42,9 @@ export default class Navigation extends Component<{}> {
   render() {
 
     var route = {
-      componment:this.props.compoment;
-      passProps: { ...this.props }
+      component:this.props.compoment,
+      title:'电影'
     };
-
 
     return (
       <NavigatorIOS

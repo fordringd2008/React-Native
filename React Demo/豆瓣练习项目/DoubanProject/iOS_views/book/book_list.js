@@ -2,6 +2,10 @@
 *   图书列表模块，搜索栏，图书列表
 *   图书列表的内容:通过调用图书搜索接口获取多条图书数据
 *   图书列表item是单独封装的
+*
+*
+*   外部传入， navigator
+*
 * */
 
 import React, { Component, PureComponent } from 'react';
@@ -90,17 +94,21 @@ export default class BookList extends  Component<{}>{
     return item.id;
   }
 
+  // 点击行
   _onPressItem(e){
-    alert(e.item.title);
 
+    var detailRoute = {
+      component:BookDetail,
+      passProps:{
+        bookID:e.item.id
+      }
+    };
+
+    alert(this.props.navigator);
+
+    // this.props.navigator.push(detailRoute);
 
   }
-
-  //renderItem: (info: {item: ItemT, index: number}) => ?React.Element<any>
-  // return <BookItem book = { book }/>
-
-/*<View style={ { flex:1, backgroundColor:'red', height:40, width:Util.windowSize.width } }/>*/
-  /*book={ book }*/
 
   _renderItem(book){
 
@@ -114,8 +122,6 @@ export default class BookList extends  Component<{}>{
 
     return (
       <BookItem book={ book } onPress={ () => this._onPressItem(book) }
-
-
       ></BookItem>
     )
   }
