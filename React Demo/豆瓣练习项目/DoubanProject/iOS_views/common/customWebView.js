@@ -27,27 +27,18 @@ export default class CustomWebView extends Component<{}> {
 
   constructor(props){
     super(props);
-    this._pop = this._pop.bind(this);
   }
 
-  // 传入的对象， 包括 backName(按钮名称)， barTitle
-  var headerContent = this.props.initObj;
-
-  // style={styles.header}
   render() {
+
+    console.log(this.props.url);
+
     return (
       <View style={ { flex:1, backgroundColor:'white'} }>
-        <Header navigationBar={ this.props.navigator }
-                initObj={
-                  backName: this.props.backName,
-                  title:this.props.title
-                }
-        >
-        </Header>
         <WebView
           startInLoadingState={true}
           contentInset={{ top: -44, bottom:-120 }}        //隐藏原有网页的 头部和底部
-          source={ this.props.url }
+          source = {{ uri: this.props.url }}
         />
       </View>
     );
@@ -85,3 +76,6 @@ const styles = StyleSheet.create({
     width:200,
   },
 });
+
+
+module.exports = CustomWebView;

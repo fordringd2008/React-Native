@@ -16,6 +16,7 @@ import {
 
 import Navigation from './iOS_views/common/navigation';
 import BookList from './iOS_views/book/book_list';
+import MovieList from './iOS_views/movie/movie_list';
 
 let FirstNavTabTitle = '图书';
 let SecondNavTabTitle = '电影';
@@ -52,8 +53,7 @@ export default class App extends Component<{}> {
           systemIcon='bookmarks'
         >
           <Navigation compoment={ BookList }
-                      style={{ flex:1 }}
-          />
+                      style={{ flex:1 }} />
         </TabBarIOS.Item>
         <TabBarIOS.Item
           title={SecondNavTabTitle}
@@ -61,7 +61,9 @@ export default class App extends Component<{}> {
           onPress={this._tabBarPress }
           systemIcon='favorites'
         >
-          <View style={{flex:1, backgroundColor:'yellow'}}></View>
+          <Navigation compoment={ MovieList }
+                      style={{ flex:1 }} />
+
         </TabBarIOS.Item>
       </TabBarIOS>
     );
