@@ -2,6 +2,9 @@
  * Sample React Native App
  * https://github.com/facebook/react-native
  * @flow
+ *
+ *
+ *
  */
 
 import React, { Component } from 'react';
@@ -97,67 +100,9 @@ const RootNavitor = StackNavigator({
   },
 });
 
-// 自定义导航条配置
-const StackOptions = ({navigation}) => {
-  console.log(navigation);
-  let {state,goBack} = navigation;
-
-  // 用来判断是否隐藏或显示header
-  const visible= state.params.isVisible;
-  let header;
-  if (visible === true){
-    header = null;
-  }
-
-  const headerStyle = {backgroundColor:'#4ECBFC'};
-  const headerTitle = state.params.title;
-  const headerTitleStyle = {fontSize:20,color:'white',fontWeight:'500'}
-  const headerBackTitle = false;
 
 
-
-  // {/*<Button*/}
-  // {/*title="返回"*/}
-  // {/*// isCustom={true}*/}
-  // {/*// customView={*/}
-  // {/*//   <Image source={ { uri:"http://pic.58pic.com/58pic/15/28/02/40y58PICn4x_1024.jpg" } } />*/}
-  // {/*//   // <Icon*/}
-  // {/*//   //   name='ios-arrow-back'*/}
-  // {/*//   //   size={30}*/}
-  // {/*//   //   color='white'*/}
-  // {/*//   //   style={{marginLeft:13}}*/}
-  // {/*//   // />*/}
-  // {/*// }*/}
-  // {/*onPress={()=>{ goBack() }}*/}
-  // {/*/>*/}
-
-  const headerLeft = (
-
-    <NavigationBackButton onPress={()=>{ goBack() }}  />
-  );
-  return {headerStyle,headerTitle,headerTitleStyle,headerBackTitle,headerLeft,header}
-};
-
-
-// 自定义导航栏返回按钮
-export  class NavigationBackButton extends Component<{}>{
-  render(){
-    return (
-      <TouchableOpacity style={{ flex:1, flexDirection:'row', alignItems:'center' }}
-                        {...this.props}
-      >
-        <Image source={ { uri:"http://pic.58pic.com/58pic/15/28/02/40y58PICn4x_1024.jpg" } }
-               style={ { width: 30, height:24 } }
-        />
-        <Text style={ {flex:1} } >返回</Text>
-      </TouchableOpacity>
-    );
-  };
-}
-
-
-
-export default class App extends Component<{}> {
+export default class App2 extends Component<{}> {
   render() {
     return (
       <RootNavitor/>

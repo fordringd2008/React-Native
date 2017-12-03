@@ -10,84 +10,83 @@ import {
   StyleSheet,
   Text,
   Button,
-  View
+  View,
+  Image
 } from 'react-native';
 
-import { StackNavigator } from 'react-navigation';
+// TabBar
+import { TabNavigator } from 'react-navigation';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-  'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-  'Shake or press menu button for dev menu',
-});
+// Icon
+// import { Ionicons } from 'react-native-vector-icons/Ionicons';
 
-const HomeScreen = ({ navigation} ) => {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen</Text>
-      <Button title='Go to Details'
-              onPress={ ()=> { navigation.navigate('Details', { navigation : navigation }); } }
-      ></Button>
-    </View>
-  );
-};
+// 使用这个矢量图像库，需要引入库文件，命令 npm install react-native-vector-icons --save
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 
-export class DetailsScreen extends Component<{}>{
 
-  constructor(props) {
-    super(props);
-
-    // 取上层传递的值是用 this.props.navigation.state.params.XXX
-
-    // 赋值给属性
-    this.navigation = this.props.navigation;
-    this.text = this.navigation.state.params.text;
-  }
-
+// 第一个视图
+export class OneScreen extends Component<{}>{
   render(){
-
-    var text = this.text;
-
-    console.log(text);
-
-    // 传递的值
-    var params = {
-      text:'标题',
-      navigation:this.props.navigation
-    };
-
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text onPress={ ()=> this.props.navigation.navigate('Details',  params)  }> { text ? text : 'Details Screen' } </Text>
-      </View>
+      <View style={{ flex:1, backgroundColor:'red' }}></View>
     );
   }
 }
 
+// 第二个视图
+export class TwoScreen extends Component<{}>{
+  render(){
+    return (
+      <View style={{ flex:1, backgroundColor:'blue' }}></View>
+    );
+  }
+}
 
 // 主导航器
-const RootNavitor = StackNavigator({
-  Home:{
-    screen:HomeScreen,
+const RootTabNavigator = TabNavigator({
+  OneS : {
+    screen: OneScreen,
     navigationOptions:{
-      headerTitle:'Home'
+      tabBarLabel:'One',
+      tabBarIcon: ({ tintColor })=>(
+        <Image
+          source = { { uri: 'http://pic.58pic.com/58pic/15/28/02/40y58PICn4x_1024.jpg' }}
+          resizeMode='contain'
+          // tintColor:tintColor,
+          style={ {  width:30, height:30 } }
+        />
+      ),
+      tabBarPosition: 'bottom',
+      swipeEnabled:false,
+      animationEnabled:false,
+      tabBarOptions: {
+        style: {
+          height:49
+        },
+        activeBackgroundColor:'white',
+        // activeTintColor:'#4ECBFC',
+        activeTintColor:'red',
+        inactiveBackgroundColor:'white',
+        inactiveTintColor:'#aaa',
+        showLabel:false,
+      }
     }
   },
-  Details:{
-    screen:DetailsScreen,
+  TwoS : {
+    screen: TwoScreen,
     navigationOptions:{
-      headerTitle:'Details',
+      tabBarLabel:'Two',
     }
   },
+
 });
 
 
 export default class App2 extends Component<{}> {
   render() {
     return (
-      <RootNavitor/>
+      <RootTabNavigator/>
     );
   }
 }
