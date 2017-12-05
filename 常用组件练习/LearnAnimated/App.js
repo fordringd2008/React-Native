@@ -20,8 +20,7 @@ export default class App extends Component<{}> {
   render() {
     return (
       <FadeInView style={{width: 250, height: 50, backgroundColor: 'powderblue',
-        justifyContent:'center',
-        alignItems:'center',
+        margin:50
       }}>
         <Text style={{fontSize: 28, textAlign: 'center', margin: 10}}>Fading in</Text>
       </FadeInView>
