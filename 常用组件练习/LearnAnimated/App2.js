@@ -21,12 +21,21 @@ import {
   // Animated
 } from 'react-native';
 
+// 安卓动画检查的引用
+import { UIManager } from 'react-native';
 
 export default class App extends Component<{}> {
   constructor(){
     super();
 
+    if (Platform.OS === 'android'){
+      // android 动画检查
+      //加上这句就有 效果了
+      UIManager.setLayoutAnimationEnabledExperimental && UIManager.setLayoutAnimationEnabledExperimental(true);
+    }
+
     this.plus = true;
+
 
     this.state = {
       width:100,
@@ -105,22 +114,24 @@ export default class App extends Component<{}> {
     };
   */
 
-    // // 完整版
-    // // 修改动画时间，延迟，阻尼放在update里面
-    // LayoutAnimation.configureNext({
-    //   duration:700,
-    //   create:{
-    //     type:LayoutAnimation.Types.spring,
-    //     property:LayoutAnimation.Properties.scaleXY
-    //   },
-    //
-    //   update:{
-    //     duration:2000,
-    //     delay:1000,
-    //     springDamping:50,
-    //     type:LayoutAnimation.Types.spring,
-    //   },
-    // });
+    // 完整版
+    // 修改动画时间，延迟，阻尼放在update里面
+    LayoutAnimation.configureNext({
+      duration:700,
+      springDamping:1500,
+      create:{
+        type:LayoutAnimation.Types.spring,
+        property:LayoutAnimation.Properties.scaleXY
+      },
+      update:{
+        delay:500,
+        type:LayoutAnimation.Types.spring,
+      },
+    }, ()=>{
+      alert('动画结束')
+    });
+
+
 
     // // 简洁版
     // LayoutAnimation.configureNext(LayoutAnimation.create(
@@ -133,7 +144,13 @@ export default class App extends Component<{}> {
 
 
     // 巨简洁版， 线性动画， 默认为0.5秒
-    LayoutAnimation.configureNext(LayoutAnimation.Presets.linear);
+    // LayoutAnimation.configureNext(LayoutAnimation.Presets.linear);
+
+
+    /*
+    * 该 框架实现单个动画非常有用，但是组合动画就显得不足， configureNext 的第二个回调参数只针对 iOS有效
+    *
+    * */
 
 
     this.setState({
