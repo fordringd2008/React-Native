@@ -18,8 +18,14 @@
 {
   NSURL *jsCodeLocation;
 
+#if DEBUG
+  // 本地资源
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
-
+#else
+  // 服务器上的资源
+  jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"bundle/index" withExtension:@"jsbundle"];
+#endif
+  
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                       moduleName:@"LearnReactNavigation"
                                                initialProperties:nil

@@ -1,0 +1,3 @@
+rootProject.name = 'LearnImage'
+
+include ':app'
