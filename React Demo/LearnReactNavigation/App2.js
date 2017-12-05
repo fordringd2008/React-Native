@@ -2,6 +2,9 @@
  * Sample React Native App
  * https://github.com/facebook/react-native
  * @flow
+ *
+ * TabNavigator tabBar练习
+ *
  */
 
 import React, { Component } from 'react';
@@ -47,13 +50,12 @@ export class TwoScreen extends Component<{}>{
 const RootTabNavigator = TabNavigator({
   OneS : {
     screen: OneScreen,
-    navigationOptions:{
+    navigationOptions: {
       tabBarLabel:'One',
-      tabBarIcon: ({ tintColor })=>(
+      tabBarIcon: ()=>(
         <Image
           source = { { uri: 'http://pic.58pic.com/58pic/15/28/02/40y58PICn4x_1024.jpg' }}
           resizeMode='contain'
-          // tintColor:tintColor,
           style={ {  width:30, height:30 } }
         />
       ),
@@ -75,12 +77,40 @@ const RootTabNavigator = TabNavigator({
   },
   TwoS : {
     screen: TwoScreen,
-    navigationOptions:{
-      tabBarLabel:'Two',
-    }
+    navigationOptions : ( () => TabOptions('Two!', null, null, 'TwoFirst'))
   },
-
 });
+
+const tabBarImageStyle = { width:30, height:30 };
+
+// 之定义tabBar样式
+const TabOptions = (tabBarTitle, normalImage, selectedImage, navTitle)=>{
+  const tabBarLabel = tabBarTitle;
+  const tabBarIcon = (({ tintColor, focused })=>{
+    return (
+      focused ?
+        <Image source={ { uri: 'http://pic.58pic.com/58pic/15/28/02/40y58PICn4x_1024.jpg' } }
+               resizeMode='contain'
+               style={ tabBarImageStyle }
+        />:
+        <Image source={ { uri: 'http://img9.3lian.com/c1/vector/10/01/043.jpg' } }
+               resizeMode='contain'
+               style={ tabBarImageStyle }
+        />
+      );
+  });
+  // const tabBarIcon = ()=>(
+  //     <Image source={{ uri: 'http://img9.3lian.com/c1/vector/10/01/043.jpg' }}
+  //       resizeMode='contain'
+  //       style={ {  width:30, height:30 } }
+  //     />
+  // );
+  const headerTitle = navTitle;
+  const headerTitleStyle = { fontSize:20, color:'white' };
+  const headerStyle = { backgroundColor:'black' };
+  return { tabBarLabel,tabBarIcon,headerTitle,headerTitleStyle,headerStyle };
+}
+
 
 
 export default class App2 extends Component<{}> {
