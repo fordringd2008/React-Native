@@ -16,7 +16,7 @@ import {
 } from 'react-native';
 
 
-import { StackNavigator, TabNavigator } from 'react-navigation';
+import { StackNavigator, TabNavigator, TabBarBottom } from 'react-navigation';
 
 import Navigation from './iOS_views/common/navigation';
 import BookList from './iOS_views/book/book_list';
@@ -54,10 +54,23 @@ const MovieNavigator = StackNavigator({
   }
 });
 
+//   tabBarComponent,
+//   tabBarPosition,
+//   tabBarOptions,
+//   swipeEnabled,
+//   animationEnabled,
+//   configureTransition,
+//   lazy,
+//   initialLayout,
+// ...tabsConfig
+
 // 主控制tabar
 const RootTabNavigator = TabNavigator({
   BookNav:{
     screen:BookNavigator,
+    tabBarPosition: 'bottom',
+    swipeEnabled:false,
+    lazy:false,
     navigationOptions:{
       tabBarLabel:'One',
       tabBarIcon: ()=>(
@@ -67,9 +80,6 @@ const RootTabNavigator = TabNavigator({
           style={ {  width:30, height:30 } }
         />
       ),
-      tabBarPosition: 'bottom',
-      swipeEnabled:false,
-      animationEnabled:false,
       tabBarOptions: {
         style: {
           height:49
@@ -85,6 +95,9 @@ const RootTabNavigator = TabNavigator({
   },
   MovieNav:{
     screen:MovieNavigator,
+    tabBarPosition: 'bottom',
+    swipeEnabled:false,
+    lazy:true,
     navigationOptions:{
       tabBarLabel:'Tow',
       tabBarIcon: ()=>(
@@ -94,9 +107,6 @@ const RootTabNavigator = TabNavigator({
           style={ {  width:30, height:30 } }
         />
       ),
-      tabBarPosition: 'bottom',
-      swipeEnabled:false,
-      animationEnabled:false,
       tabBarOptions: {
         style: {
           height:49
@@ -110,6 +120,13 @@ const RootTabNavigator = TabNavigator({
       }
     }
   },
+},
+{
+  tabBarOptions: {
+    activeTintColor: 'red',
+  },
+  tabBarComponent: TabBarBottom,   // 这里是安卓的tab 位于下方
+  tabBarPosition: 'bottom',
 });
 
 
