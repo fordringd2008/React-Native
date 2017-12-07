@@ -31,6 +31,7 @@ export default class BookList extends  Component<{}>{
 
   constructor(props){
     super(props);
+    this.navigation = this.props.navigation;
     this.getData = this.getData.bind(this);
     this._onPressSearchBtn = this._onPressSearchBtn.bind(this);
     this._onChangeText = this._onChangeText.bind(this);
@@ -97,16 +98,18 @@ export default class BookList extends  Component<{}>{
   // 点击行
   _onPressItem(e){
 
-    var detailRoute = {
-      component:BookDetail,
-      passProps:{
-        bookID:e.item.id
-      }
-    };
+    // var detailRoute = {
+    //   component:BookDetail,
+    //   passProps:{
+    //     bookID:e.item.id
+    //   }
+    // };
+    //
+    // // alert(this.props.navigator);
+    //
+    // this.props.navigator.push(detailRoute);
 
-    // alert(this.props.navigator);
-
-    this.props.navigator.push(detailRoute);
+    this.navigation.navigate('BookDetail', { bookID:e.item.id })
 
   }
 

@@ -27,6 +27,7 @@ export default class MovieList extends Component<{}> {
 
   constructor(props){
     super(props);
+    this.navigation = this.props.navigation;
     this.getData = this.getData.bind(this);
     this._onPressSearchBtn = this._onPressSearchBtn.bind(this);
     this._onChangeText = this._onChangeText.bind(this);
@@ -48,6 +49,7 @@ export default class MovieList extends Component<{}> {
       //
       keyWords:'哈利波特'
     };
+
   }
 
 
@@ -92,18 +94,22 @@ export default class MovieList extends Component<{}> {
   // 点击行
   _onPressItem(e){
 
-    var movie = e.item;
+    // var movie = e.item;
+    //
+    // var detailRoute = {
+    //   component:MovieWebView,
+    //   title:movie.title,
+    //   passProps:{
+    //     url:movie.alt
+    //   }
+    // };
+    //
+    // this.props.navigator.push(detailRoute);
 
+    this.navigation.navigate('MovieWebView', { bookID:e.item.id })
 
-    var detailRoute = {
-      component:MovieWebView,
-      title:movie.title,
-      passProps:{
-        url:movie.alt
-      }
-    };
+    // this.navigation.navigate()
 
-    this.props.navigator.push(detailRoute);
   }
 
   _renderItem(movie){

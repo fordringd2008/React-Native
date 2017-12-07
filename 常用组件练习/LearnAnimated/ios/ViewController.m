@@ -10,6 +10,19 @@
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 
+@implementation RNBridgeModule
+
+RCT_EXPORT_MODULE();
+
+//RN传参数调用原生OC,并且返回数据给RN  通过CallBack
+RCT_EXPORT_METHOD(RNInvokeOCCallBack:(NSDictionary *)dictionary callback:(RCTResponseSenderBlock)callback){
+  NSLog(@"接收到RN传过来的数据为:%@",dictionary);
+  NSArray *events = [[NSArray alloc] initWithObjects:@"张三",@"李四", nil];
+  callback(@[[NSNull null], events]);
+}
+
+@end
+
 @interface ViewController ()
 
 @end
@@ -18,8 +31,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  
-  self.view.backgroundColor = [UIColor whiteColor];
+
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -42,15 +55,5 @@
   
   [self.navigationController pushViewController:rnController animated:YES];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

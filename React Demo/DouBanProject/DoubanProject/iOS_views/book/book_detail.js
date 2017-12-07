@@ -34,6 +34,8 @@ export default class BookDetail extends Component<{}> {
 
     this.getData = this.getData.bind(this);
 
+    this.bookID = this.props.navigation.state.params.bookID;
+
     this.state = {
       bookData:null       // 图书对象详情信息
     };
@@ -44,7 +46,7 @@ export default class BookDetail extends Component<{}> {
 
     var that = this;
 
-    var url = ServerURL.book_detail_id + this.props.bookID;
+    var url = ServerURL.book_detail_id + this.bookID;
 
     Util.getRequst(url, (data)=>{
 

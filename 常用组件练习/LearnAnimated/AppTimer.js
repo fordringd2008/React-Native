@@ -16,11 +16,11 @@ import {
   Image,
   Animated,
   Easing,
-  InteractionManager
+  InteractionManager,
+  NativeModules
 } from 'react-native';
 
 import { UIManager } from 'react-native';
-
 
 
 export default class App extends Component<{}> {
@@ -58,11 +58,30 @@ export default class App extends Component<{}> {
       alert("111");
     }, 1300);
 
-    this.timer2 = setInterval(
-      ()=>{
-        console.log('setInterval 2')},
-      1500
-    )
+    // this.timer2 = setInterval(
+    //   ()=>{
+    //     console.log('setInterval 2')},
+    //   1500
+    // );
+
+
+    var RNBridgeModule = NativeModules.RNBridgeModule;
+
+    alert('module' + RNBridgeModule);
+    //
+    // RNBridgeModule.RNInvokeOCCallBack(
+    //   {'name':'jiangqq','description':'http://www.lcode.org'},
+    //   (error,events)=>{
+    //     if(error){
+    //       console.error(error);
+    //     }else{
+    //       this.setState({events:events});
+    //     }
+    //   }
+    // )
+
+
+
   }
 
   componentWillUnmount() {
