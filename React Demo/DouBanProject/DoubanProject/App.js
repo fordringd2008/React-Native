@@ -86,7 +86,7 @@ const RootTabNavigator = TabNavigator({
   MovieNav:{
     screen:MovieNavigator,
     navigationOptions:{
-      tabBarLabel:'One',
+      tabBarLabel:'Tow',
       tabBarIcon: ()=>(
         <Image
           source = { { uri: 'http://pic.58pic.com/58pic/15/28/02/40y58PICn4x_1024.jpg' }}
