@@ -72,6 +72,38 @@
 
     var Demo = React.createClass({
 
+
+      testFuction: function(){
+        console.log("testsFuction");
+
+        // var array = ["a", "b", "c"];
+        // for(var value of array){
+        //   console.log(value);
+        // }
+
+
+      var array = ["a", "b", "a"];
+
+      var words = new Set(array);
+
+      // words.forEach((value) => {
+      //   console.log(value);
+      // });
+
+      for (var [key, value] of words) {
+        console.log(key + ' ----- ' + value);
+      }
+
+
+      },
+
+      textFuction1(){
+        console.log("testsFuction1");
+      },
+
+
+
+
       /*
          一，创建阶段
           流程：
@@ -106,6 +138,10 @@
       render:function(){
         // 渲染并返回一个虚拟DOM
         console.log("render");
+        this.testFuction();
+        this.textFuction1();
+
+
         return <h1>Hello React</h1>
       },
 
@@ -176,38 +212,38 @@
 
 // 允许刷新的是偶
 
-      getDefaultProps
-      getInitialState
-      componentWillMount
-      render
-      componentDidMount
-      componentWillReceiveProps
-      sholdComponentUpdate      // 即这个方法返回 true
-      componentWillUpdate
-      render
-      componentDidUpdate
+//       getDefaultProps
+//       getInitialState
+//       componentWillMount
+//       render
+//       componentDidMount
+//       componentWillReceiveProps
+//       sholdComponentUpdate      // 即这个方法返回 true
+//       componentWillUpdate
+//       render
+//       componentDidUpdate
 
 
-//   不允许再次更新
-      getDefaultProps
-      getInitialState
-      componentWillMount
-      render
-      componentDidMount
-      componentWillReceiveProps
-      sholdComponentUpdate        // 即这个方法返回 false
+// //   不允许再次更新
+//       getDefaultProps
+//       getInitialState
+//       componentWillMount
+//       render
+//       componentDidMount
+//       componentWillReceiveProps
+//       sholdComponentUpdate        // 即这个方法返回 false
 
 
-//   移除组件
+// //   移除组件
 
-      getDefaultProps
-      getInitialState
-      componentWillMount
-      render
-      componentDidMount
-      componentWillReceiveProps
-      sholdComponentUpdate        // 返回的为 false
-      componentWillUnmount
+//       getDefaultProps
+//       getInitialState
+//       componentWillMount
+//       render
+//       componentDidMount
+//       componentWillReceiveProps
+//       sholdComponentUpdate        // 返回的为 false
+//       componentWillUnmount
 
 
   </script>
