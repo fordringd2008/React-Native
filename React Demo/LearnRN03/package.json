@@ -8,12 +8,12 @@
 	},
 	"dependencies": {
 		"react": "^16.0.0",
-		"react-native": "^0.50.4",
+		"react-native": "^0.70.6",
 		"react-navigation": "^1.0.0-beta.21"
 	},
 	"devDependencies": {
 		"babel-jest": "21.2.0",
-		"babel-preset-react-native": "4.0.0",
+		"babel-preset-react-native": "5.0.2",
 		"jest": "21.2.1",
 		"react-test-renderer": "16.0.0"
 	},
